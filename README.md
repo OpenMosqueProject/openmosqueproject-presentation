@@ -13,6 +13,14 @@ Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings
 
 ## Basic Commands
 
+### Setting up environment 
+- To setup a basic env, first install `pipenv` on your pc to create a virtualenv, `pip install pipenv` after,
+- `pipenv install -r requirements/local.txt` to install all dependencies
+-  To enter virtualenv use `pipenv shell` and run your commands there or use `pipenv run <command>` for single commands
+-  Run everything related to the project **only** inside the venv, to run the initial migration run
+-  If you haven't already `pipenv shell` and then `python manage.py migrate`
+
+
 ### Setting Up Your Users
 
 -   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
