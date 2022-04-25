@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    {% for masjid in object_list %}
+        <p>{{masjid.masjid_name}}</p>
+        <p>{{masjid.city}}</p>
+        <p>{{masjid.country}}</p>
+        <p>{{masjid.method}}</p>
+        <a href="{% url 'masjid_delete' masjid.pk %}">DELETE</a>
+        
+        <hr>
+    {% endfor %}
+{% endblock %}
