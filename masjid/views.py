@@ -25,7 +25,7 @@ class MasjidCreate(CreateView):
         self.object = form.save(commit=False)
         self.object.user = self.request.user
         print(form.cleaned_data['masjid_name'])
-# <bound method BaseModelForm.clean of <MasjidForm bound=True, valid=True, fields=(masjid_name;city;country;method;masjidLogo)>>
+        # do some checks on the API, validate form if API returns values
         self.object.save()
         return HttpResponseRedirect(self.get_success_url())
 
